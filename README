@@ -1,0 +1,24 @@
+Esp32PlainImageToFlashEncBoard.py
+
+This tool enables you to import the flash partition images on
+the ESP32 board which is not in Flash-Encryption mode to
+the ESP32 board which is in Flash-Encryption mode.
+
+   ESP32 Board A                         ESP32 Board B
++------------------+  copy & encrypt  +------------------+
+| Flash Encryption | partition images | Flash Encryption |
+|     DISABLED     | ===============> |     ENABLED      | 
++------------------+                  +------------------+
+
+In the course of processing, images will be encrypted as necessary.
+The "Pregenerated Flash Encryption Key" is required.
+For details of Flash Encryption, refer to the following document.
+https://docs.espressif.com/projects/esp-idf/en/latest/security/flash-encryption.html
+
+Requires 'esptool', 'espefuse', 'espsecure' by Espressif Systems.
+https://github.com/espressif/esptool
+
+Supports Linux, MacOSX, Windows. Please edit the "Environment Dependent"
+section according to your environment.
+
+Copyright (c) 2018 KLab Inc.
